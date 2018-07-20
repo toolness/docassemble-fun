@@ -13,7 +13,15 @@ You'll need [Docker][] and [NodeJS][].
 
 In one terminal, run `docker-compose up`. This will start up docassemble.
 
-Once you see that apache2 has started up, visit http://localhost/ and login
+Note that docassemble may take a while to get all its services running.
+Eventually you should see a message that looks something like this:
+
+```
+app_1  | 2018-07-20 09:19:34,431 INFO spawned: 'apache2' with pid 448
+```
+
+This means that the apache2 web server has started up, so docassemble
+*should* be ready to visit. Try visiting http://localhost/ and login
 as `admin@admin.com` with password `password`. You'll be asked to change the
 password; set it to something with least eight characters long with at least one
 lowercase letter and one number.
