@@ -1,0 +1,52 @@
+---
+question: |
+  What is your name?
+fields:
+  - Your name: name
+mandatory: True
+---
+question: |
+  What are your housing issues?
+fields:
+  - "Select your housing issues.": housing_issues
+    datatype: checkboxes
+    choices:
+      - My apartment needs repairs: repairs
+      - My landlord is harassing me: harassment
+      - I am facing eviction: eviction
+      - I am having issues with my lease: lease
+      - I am living without essential services, like heat/gas/hot water: essential
+      - I have other apartment issues: other
+mandatory: True
+---
+mandatory: True
+question: |
+  Thanks!
+subquestion: |
+  % if housing_issues['eviction']:
+  Since you’re in an eviction, it’s important to try to get legal help right away.
+  We’ll point you to a resource that can help you find a lawyer in just a few moments.  
+  % endif
+buttons:
+  - Continue: continue
+---
+mandatory: True
+question: |
+  What kind of lease do you have?
+field: lease_type
+choices:
+  - Market rate
+  - Rent stabilized
+  - Public housing (NYCHA)
+  - Other (e.g. month-to-month)
+  - Not sure
+---
+question: |
+  What is your phone number?
+fields:
+  - Your phone number: phone
+mandatory: True
+---
+mandatory: True
+question: |
+  Thanks, that is all for now.

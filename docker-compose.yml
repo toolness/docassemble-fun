@@ -1,0 +1,29 @@
+version: '3'
+services:
+  app:
+    image: jhpyle/docassemble
+    # https://docassemble.org/docs/docker.html#tocAnchor-1-10-3
+    volumes:
+      - ./backup:/usr/share/docassemble/backup
+    ports:
+      - 80:80
+    stop_grace_period: 1m
+    # https://docassemble.org/docs/docker.html#configuration%20options
+    environment:
+      - CONTAINERROLE=all
+      - DBPREFIX=postgresql+psycopg2://
+      - DBNAME=docassemble
+      - DBUSER=docassemble
+      - DBPASSWORD=abc123
+      - DBHOST=localhost
+      - USEHTTPS=false
+      - DAHOSTNAME=docassemble.example.com
+      - USELETSENCRYPT=false
+      - LETSENCRYPTEMAIL=
+      - S3ENABLE=false
+      - S3ACCESSKEY=
+      - S3SECRETACCESSKEY=
+      - S3BUCKET=
+      - S3REGION=
+      - EC2=false
+      - TIMEZONE=America/New_York
