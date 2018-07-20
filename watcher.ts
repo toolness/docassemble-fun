@@ -19,6 +19,7 @@ interface SessionState {
   csrf_token: string
 }
 
+// https://docassemble.org/docs/frontend.html
 async function login(email: string, password: string): Promise<SessionState> {
   console.log(`Logging in as ${email}...`);
 
