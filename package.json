@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/watcher.js",
+    "start": "ts-node watcher.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,6 +16,7 @@
     "chokidar": "^2.0.4",
     "request": "^2.87.0",
     "request-promise-native": "^1.0.5",
+    "ts-node": "^7.0.0",
     "typescript": "^2.9.2"
   }
 }

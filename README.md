@@ -11,7 +11,7 @@ Then visit the "playground" section of the docassemble site from the top-right
 menu and click "Save" followed by "Save and Run".
 
 In another terminal, run `npm install`, set the `PASSWORD` environment variable
-to the password you just used, and run `npm run build` followed by `npm start`.
+to the password you just used, and run `npm start`.
 
 Now edit `test.yml`.  Once you save it, you should be able to reload the
 playground interview in your browser and see the updated interview.
